@@ -37,10 +37,10 @@ export default class BookingSuccess extends Component {
                          </div>
                          <div className="row success-detail">
                               <div className="col">
-                                   <h2>Payment Successful ! get ready to fly</h2>
-                                   <p>thank you for you payment. we have received your payment successfully. your transaction ID is
-          "SHJG12155215", you will get an email invoice soon!</p>
-                                   <button type="submit" className="btn btn-solid color1">download invoice</button>
+                                   <h2>Giao dịch thành công! Vui lòng chuẩn bị trước chuyến bay!</h2>
+                                   <p>Cảm ơn bạn đã thanh toán. Chúng tôi đã nhận được khoản thanh toán bạn gửi. Mã giao dịch của bạn là
+          "SHJG12155215", bạn sẽ sớm nhận được email kèm hóa đơn!</p>
+                                   <button type="submit" className="btn btn-solid color1">tải về hóa đơn</button>
                               </div>
                          </div>
                     </div>

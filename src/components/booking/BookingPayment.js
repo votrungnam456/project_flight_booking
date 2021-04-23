@@ -12,7 +12,7 @@ export default class BookingPayment extends Component {
                                         <div className="review-section">
                                              <div className="review_box">
                                                   <div className="title-top">
-                                                       <h5>payment option</h5>
+                                                       <h5>tùy chọn thanh toán</h5>
                                                   </div>
                                                   <div className="flight_detail payment-gateway">
                                                        <div className="accordion" id="accordionExample">
@@ -21,7 +21,7 @@ export default class BookingPayment extends Component {
                                                                       <div className="btn btn-link" data-toggle="collapse" data-target="#one" aria-expanded="true" aria-controls="one">
                                                                            <label htmlFor="r_one">
                                                                                 <input type="radio" className="radio_animated ml-0" defaultChecked id="r_one" name="occupation" defaultValue="Working" required />
-                          debit card
+                          thẻ ghi nợ
                         </label>
                                                                       </div>
                                                                  </div>
@@ -29,37 +29,37 @@ export default class BookingPayment extends Component {
                                                                       <div className="card-body">
                                                                            <form>
                                                                                 <div className="form-group">
-                                                                                     <label htmlFor="name">name on card</label>
+                                                                                     <label htmlFor="name">tên chủ sỡ hữu</label>
                                                                                      <input type="text" className="form-control" id="name" />
                                                                                 </div>
                                                                                 <div className="form-group">
-                                                                                     <label htmlFor="number">card number</label>
+                                                                                     <label htmlFor="number">số thẻ</label>
                                                                                      <input type="text" className="form-control" id="number" />
                                                                                      <img src="../assets/images/creditcards.png" alt className="img-fluid blur-up lazyload" />
                                                                                 </div>
                                                                                 <div className="form-row">
                                                                                      <div className="form-group col-md-4">
-                                                                                          <label htmlFor="month">month</label>
+                                                                                          <label htmlFor="month">tháng</label>
                                                                                           <select id="month" className="form-control">
-                                                                                               <option selected>Month...</option>
-                                                                                               <option>January</option>
-                                                                                               <option>February</option>
-                                                                                               <option>March</option>
-                                                                                               <option>April</option>
-                                                                                               <option>May</option>
-                                                                                               <option>June</option>
-                                                                                               <option>July</option>
-                                                                                               <option>August</option>
-                                                                                               <option>September</option>
-                                                                                               <option>October</option>
-                                                                                               <option>November</option>
-                                                                                               <option>December</option>
+                                                                                               <option selected>Tháng...</option>
+                                                                                               <option>Tháng 01</option>
+                                                                                               <option>Tháng 02</option>
+                                                                                               <option>Tháng 03</option>
+                                                                                               <option>Tháng 04</option>
+                                                                                               <option>Tháng 05</option>
+                                                                                               <option>Tháng 06</option>
+                                                                                               <option>Tháng 07</option>
+                                                                                               <option>Tháng 08</option>
+                                                                                               <option>Tháng 09</option>
+                                                                                               <option>Tháng 10</option>
+                                                                                               <option>Tháng 11</option>
+                                                                                               <option>Tháng 12</option>
                                                                                           </select>
                                                                                      </div>
                                                                                      <div className="form-group col-md-4">
-                                                                                          <label htmlFor="year">year</label>
+                                                                                          <label htmlFor="year">năm</label>
                                                                                           <select id="year" className="form-control">
-                                                                                               <option selected>Year...</option>
+                                                                                               <option selected>Năm...</option>
                                                                                                <option>...</option>
                                                                                           </select>
                                                                                      </div>
@@ -70,8 +70,7 @@ export default class BookingPayment extends Component {
                                                                                      </div>
                                                                                 </div>
                                                                                 <div className="payment-btn">
-                                                                                     <button type="submit" className="btn btn-solid color1">make
-                              payment</button>
+                                                                                     <button type="submit" className="btn btn-solid color1">thanh toán</button>
                                                                                 </div>
                                                                            </form>
                                                                       </div>
@@ -81,7 +80,7 @@ export default class BookingPayment extends Component {
                                                                  <div className="card-header" id="h_two">
                                                                       <div className="btn btn-link" data-toggle="collapse" data-target="#two" aria-expanded="true" aria-controls="two">
                                                                            <label htmlFor="r_two">
-                                                                                <input type="radio" className="radio_animated ml-0" id="r_two" name="occupation" defaultValue="Working" required /> credit card
+                                                                                <input type="radio" className="radio_animated ml-0" id="r_two" name="occupation" defaultValue="Working" required /> thẻ tín dụng
                         </label>
                                                                       </div>
                                                                  </div>
@@ -89,37 +88,37 @@ export default class BookingPayment extends Component {
                                                                       <div className="card-body">
                                                                            <form>
                                                                                 <div className="form-group">
-                                                                                     <label htmlFor="c-name">name on card</label>
+                                                                                     <label htmlFor="c-name">tên chủ sở hữu</label>
                                                                                      <input type="text" className="form-control" id="c-name" />
                                                                                 </div>
                                                                                 <div className="form-group">
-                                                                                     <label htmlFor="c-number">card number</label>
+                                                                                     <label htmlFor="c-number">số thẻ</label>
                                                                                      <input type="text" className="form-control" id="c-number" />
                                                                                      <img src="../assets/images/creditcards.png" alt className="img-fluid blur-up lazyload" />
                                                                                 </div>
                                                                                 <div className="form-row">
                                                                                      <div className="form-group col-md-4">
-                                                                                          <label htmlFor="c-month">month</label>
+                                                                                          <label htmlFor="c-month">tháng</label>
                                                                                           <select id="c-month" className="form-control">
-                                                                                               <option selected>Month...</option>
-                                                                                               <option>January</option>
-                                                                                               <option>February</option>
-                                                                                               <option>March</option>
-                                                                                               <option>April</option>
-                                                                                               <option>May</option>
-                                                                                               <option>June</option>
-                                                                                               <option>July</option>
-                                                                                               <option>August</option>
-                                                                                               <option>September</option>
-                                                                                               <option>October</option>
-                                                                                               <option>November</option>
-                                                                                               <option>December</option>
+                                                                                               <option selected>Tháng...</option>
+                                                                                               <option>Tháng 01</option>
+                                                                                               <option>Tháng 02</option>
+                                                                                               <option>Tháng 03</option>
+                                                                                               <option>Tháng 04</option>
+                                                                                               <option>Tháng 05</option>
+                                                                                               <option>Tháng 06</option>
+                                                                                               <option>Tháng 07</option>
+                                                                                               <option>Tháng 08</option>
+                                                                                               <option>Tháng 09</option>
+                                                                                               <option>Tháng 10</option>
+                                                                                               <option>Tháng 11</option>
+                                                                                               <option>Tháng 12</option>
                                                                                           </select>
                                                                                      </div>
                                                                                      <div className="form-group col-md-4">
-                                                                                          <label htmlFor="c-year">year</label>
+                                                                                          <label htmlFor="c-year">năm</label>
                                                                                           <select id="c-year" className="form-control">
-                                                                                               <option selected>Year...</option>
+                                                                                               <option selected>Năm...</option>
                                                                                                <option>...</option>
                                                                                           </select>
                                                                                      </div>
@@ -130,8 +129,7 @@ export default class BookingPayment extends Component {
                                                                                      </div>
                                                                                 </div>
                                                                                 <div className="payment-btn">
-                                                                                     <button type="submit" className="btn btn-solid color1">make
-                              payment</button>
+                                                                                     <button type="submit" className="btn btn-solid color1">thanh toán</button>
                                                                                 </div>
                                                                            </form>
                                                                       </div>
@@ -141,62 +139,61 @@ export default class BookingPayment extends Component {
                                                                  <div className="card-header" id="h_three">
                                                                       <div className="btn btn-link" data-toggle="collapse" data-target="#three" aria-expanded="true" aria-controls="three">
                                                                            <label htmlFor="r_three">
-                                                                                <input type="radio" className="radio_animated ml-0" id="r_three" name="occupation" defaultValue="Working" required /> net banking
+                                                                                <input type="radio" className="radio_animated ml-0" id="r_three" name="occupation" defaultValue="Working" required /> ngân hàng trực tuyến
                         </label>
                                                                       </div>
                                                                  </div>
                                                                  <div id="three" className="collapse" aria-labelledby="h_three" data-parent="#accordionExample">
                                                                       <div className="card-body">
                                                                            <form className="wallet-section">
-                                                                                <h6>select popular banks</h6>
+                                                                                <h6>chọn ngân hàng phổ biến</h6>
                                                                                 <div className="form-row">
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios1" defaultValue="option1" defaultChecked />
                                                                                           <label className="form-check-label" htmlFor="Radios1">
-                                                                                               Industrial &amp; Commercial Bank
+                                                                                                Ngân hàng Công nghiệp &amp; Thương mại
                               </label>
                                                                                      </div>
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios2" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="Radios2">
-                                                                                               Construction Bank Corp.
+                                                                                               Tập đoàn Ngân hàng Xây dựng
                               </label>
                                                                                      </div>
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios3" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="Radios3">
-                                                                                               Agricultural Bank
+                                                                                               Ngân hàng Nông nghiệp
                               </label>
                                                                                      </div>
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios4" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="Radios4">
-                                                                                               HSBC Holdings
+                                                                                               Ngân hàng HSCB
                               </label>
                                                                                      </div>
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios5" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="Radios5">
-                                                                                               Bank of America
+                                                                                               Ngân hàng Hoa Kỳ
                               </label>
                                                                                      </div>
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="Radios6" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="Radios6">
-                                                                                               JPMorgan Chase &amp; Co.
+                                                                                               Ngân hàng JPMorgan Chase &amp; Co.
                               </label>
                                                                                      </div>
                                                                                 </div>
                                                                                 <div className="form-group mt-3">
-                                                                                     <label htmlFor="net-b">select bank</label>
+                                                                                     <label htmlFor="net-b">chọn ngân hàng</label>
                                                                                      <select id="net-b" className="form-control">
-                                                                                          <option selected>Choose Bank...</option>
+                                                                                          <option selected>Ngân hàng...</option>
                                                                                           <option>...</option>
                                                                                      </select>
                                                                                 </div>
                                                                                 <div className="payment-btn">
-                                                                                     <button type="submit" className="btn btn-solid color1">make
-                              payment</button>
+                                                                                     <button type="submit" className="btn btn-solid color1">thanh toán</button>
                                                                                 </div>
                                                                            </form>
                                                                       </div>
@@ -206,14 +203,14 @@ export default class BookingPayment extends Component {
                                                                  <div className="card-header" id="h_four">
                                                                       <div className="btn btn-link" data-toggle="collapse" data-target="#four" aria-expanded="true" aria-controls="four">
                                                                            <label htmlFor="r_four">
-                                                                                <input type="radio" className="radio_animated ml-0" id="r_four" name="occupation" defaultValue="Working" required /> my wallet
+                                                                                <input type="radio" className="radio_animated ml-0" id="r_four" name="occupation" defaultValue="Working" required /> Ví của tôi
                         </label>
                                                                       </div>
                                                                  </div>
                                                                  <div id="four" className="collapse" aria-labelledby="h_four" data-parent="#accordionExample">
                                                                       <div className="card-body">
                                                                            <form className="wallet-section">
-                                                                                <h6>select your wallet</h6>
+                                                                                <h6>chọn ví của bạn</h6>
                                                                                 <div className="form-row">
                                                                                      <div className="form-check col-md-6">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios1" defaultValue="option1" defaultChecked />
@@ -253,8 +250,7 @@ export default class BookingPayment extends Component {
                                                                                      </div>
                                                                                 </div>
                                                                                 <div className="payment-btn">
-                                                                                     <button type="submit" className="btn btn-solid color1">make
-                              payment</button>
+                                                                                     <button type="submit" className="btn btn-solid color1">thanh toán</button>
                                                                                 </div>
                                                                            </form>
                                                                       </div>
@@ -270,7 +266,7 @@ export default class BookingPayment extends Component {
                                              <div className="review-section">
                                                   <div className="review_box">
                                                        <div className="title-top">
-                                                            <h5>booking summery</h5>
+                                                            <h5>tóm tắt</h5>
                                                        </div>
                                                        <div className="flight_detail">
                                                             <div className="summery_box">
@@ -279,38 +275,38 @@ export default class BookingPayment extends Component {
                                                                  <table className="table table-borderless">
                                                                       <tbody>
                                                                            <tr>
-                                                                                <td>flight fare</td>
+                                                                                <td>giá vé</td>
                                                                                 <td>$2500</td>
                                                                            </tr>
                                                                            <tr className="title">
-                                                                                <td>additional baggage</td>
+                                                                                <td>hành lý phát sinh</td>
                                                                            </tr>
                                                                            <tr>
-                                                                                <td>additional 15kg</td>
+                                                                                <td>vượt 15kg</td>
                                                                                 <td>+ $25</td>
                                                                            </tr>
                                                                            <tr className="title">
-                                                                                <td>inflight meals</td>
+                                                                                <td>khẩu phần ăn</td>
                                                                            </tr>
                                                                            <tr>
-                                                                                <td>veg meal X (1)</td>
+                                                                                <td>khẩu phần rau X (1)</td>
                                                                                 <td>+ $18</td>
                                                                            </tr>
                                                                            <tr>
-                                                                                <td>non-veg meal X (1)</td>
+                                                                                <td>khẩu phần không rau X (1)</td>
                                                                                 <td>+ $18</td>
                                                                            </tr>
                                                                            <tr className="title">
-                                                                                <td>seats</td>
+                                                                                <td>ghế ngồi</td>
                                                                            </tr>
                                                                            <tr>
-                                                                                <td>seat(10D)</td>
+                                                                                <td>ghế(10D)</td>
                                                                                 <td>+ $5</td>
                                                                            </tr>
                                                                       </tbody>
                                                                  </table>
                                                                  <div className="grand_total">
-                                                                      <h5>grand total: <span>$2750</span></h5>
+                                                                      <h5>thành tiền: <span>$2750</span></h5>
                                                                  </div>
                                                             </div>
                                                        </div>
@@ -324,8 +320,8 @@ export default class BookingPayment extends Component {
                     {/* booking section end */}
                     {/* book now section start */}
                     <div className="book-panel">
-                         <h6 className="mb-0 text">grand total : <span>$2750</span></h6>
-                         <button type="button" className="btn bottom-btn theme-color">make payment</button>
+                         <h6 className="mb-0 text">thành tiền : <span>$2750</span></h6>
+                         <button type="button" className="btn bottom-btn theme-color">thanh toán</button>
                     </div>
                     {/* book now section end */}
                </div>

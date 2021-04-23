@@ -13,7 +13,7 @@ export default class BookingAddOns extends Component {
                                    <div className="review-section">
                                         <div className="review_box">
                                              <div className="title-top">
-                                                  <h5>add more for your trip</h5>
+                                                  <h5>thêm vào chuyến đi của bạn</h5>
                                              </div>
                                              <div className="flight_detail">
                                                   <div className="row">
@@ -23,7 +23,7 @@ export default class BookingAddOns extends Component {
                                                                       <div className="card-header" id="headingTwo">
                                                                            <h2 className="mb-0">
                                                                                 <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                                                     <img src="../assets/images/icon/seat.png" alt className="img-fluid blur-up lazyload" /> select seats
+                                                                                     <img src="../assets/images/icon/seat.png" alt className="img-fluid blur-up lazyload" /> chọn ghế
                           </button>
                                                                            </h2>
                                                                       </div>
@@ -33,15 +33,15 @@ export default class BookingAddOns extends Component {
                                                                                      <ul>
                                                                                           <li>
                                                                                                <div className="box taken" />
-                                                                                               <h6>taken</h6>
+                                                                                               <h6>đã được lấy</h6>
                                                                                           </li>
                                                                                           <li>
                                                                                                <div className="box selected" />
-                                                                                               <h6>selected</h6>
+                                                                                               <h6>đã chọn</h6>
                                                                                           </li>
                                                                                           <li>
                                                                                                <div className="box available" />
-                                                                                               <h6>available</h6>
+                                                                                               <h6>sẵn sàng</h6>
                                                                                           </li>
                                                                                      </ul>
                                                                                 </div>
@@ -345,7 +345,7 @@ export default class BookingAddOns extends Component {
                                                                       <div className="card-header" id="headingOne">
                                                                            <h2 className="mb-0">
                                                                                 <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                                     <img src="../assets/images/icon/sandwich.png" alt className="img-fluid blur-up lazyload" /> Add inflight Meals
+                                                                                     <img src="../assets/images/icon/sandwich.png" alt className="img-fluid blur-up lazyload" /> thêm khẩu phần ăn trên chuyến bay
                           </button>
                                                                            </h2>
                                                                       </div>
@@ -355,8 +355,7 @@ export default class BookingAddOns extends Component {
                                                                                      <div className="order-items">
                                                                                           <div className="items non-veg">
                                                                                                <h6>Barbaresca Pasta</h6>
-                                                                                               <p>Spinach ravioli with combination sauce, broccoli,
-                                  zucchini.</p>
+                                                                                               <p>Bánh bao rau pina kiểu Ý cùng sự pha trộn với nước sốt, bông cải xanh và bí</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -377,8 +376,8 @@ export default class BookingAddOns extends Component {
                                                                                           </div>
                                                                                           <div className="items non-veg">
                                                                                                <h6>Sprouts Salad</h6>
-                                                                                               <p>Tomato, cucumber, peppers, olives, onion, feta,
-                                  iceberg lettuce.</p>
+                                                                                               <p>Cà chua, dưa leo, tiêu, trái ô liu, hành tây, phô mai Hy Lạp,
+                                  rau diếp băng.</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -399,8 +398,7 @@ export default class BookingAddOns extends Component {
                                                                                           </div>
                                                                                           <div className="items veg">
                                                                                                <h6>Barbaresca Pasta</h6>
-                                                                                               <p>Spinach ravioli with combination sauce, broccoli,
-                                  zucchini.</p>
+                                                                                               <p>Bánh bao rau pina kiểu Ý cùng sự pha trộn với nước sốt, bông cải xanh và bí</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -421,8 +419,8 @@ export default class BookingAddOns extends Component {
                                                                                           </div>
                                                                                           <div className="items veg">
                                                                                                <h6>Sprouts Salad</h6>
-                                                                                               <p>Tomato, cucumber, peppers, olives, onion, feta,
-                                  iceberg lettuce.</p>
+                                                                                               <p>Cà chua, dưa leo, tiêu, trái ô liu, hành tây, phô mai Hy Lạp,
+                                  rau diếp băng.</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -443,8 +441,7 @@ export default class BookingAddOns extends Component {
                                                                                           </div>
                                                                                           <div className="items veg">
                                                                                                <h6>Barbaresca Pasta</h6>
-                                                                                               <p>Spinach ravioli with combination sauce, broccoli,
-                                  zucchini.</p>
+                                                                                               <p>Bánh bao rau pina kiểu Ý cùng sự pha trộn với nước sốt, bông cải xanh và bí</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -465,8 +462,8 @@ export default class BookingAddOns extends Component {
                                                                                           </div>
                                                                                           <div className="items veg">
                                                                                                <h6>Sprouts Salad</h6>
-                                                                                               <p>Tomato, cucumber, peppers, olives, onion, feta,
-                                  iceberg lettuce.</p>
+                                                                                               <p>Cà chua, dưa leo, tiêu, trái ô liu, hành tây, phô mai Hy Lạp,
+                                  rau diếp băng.</p>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
@@ -494,7 +491,7 @@ export default class BookingAddOns extends Component {
                                                                       <div className="card-header" id="headingThree">
                                                                            <h2 className="mb-0">
                                                                                 <button className="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                                                     <img src="../assets/images/icon/suitcase.png" alt className="img-fluid blur-up lazyload" /> additional baggage
+                                                                                     <img src="../assets/images/icon/suitcase.png" alt className="img-fluid blur-up lazyload" /> hành lý phát sinh
                           </button>
                                                                            </h2>
                                                                       </div>
@@ -503,47 +500,47 @@ export default class BookingAddOns extends Component {
                                                                                 <div className="order-section">
                                                                                      <div className="order-items">
                                                                                           <div className="items">
-                                                                                               <h6>additional 5 KG</h6>
+                                                                                               <h6>vượt 5 KG</h6>
                                                                                                <h5>$10.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
-                                                                                                         add
+                                                                                                         thêm
                                   </button>
                                                                                                </div>
                                                                                           </div>
                                                                                           <div className="items">
-                                                                                               <h6>additional 7 KG</h6>
+                                                                                               <h6>vượt 7 KG</h6>
                                                                                                <h5>$15.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
-                                                                                                         add
+                                                                                                         thêm
                                   </button>
                                                                                                </div>
                                                                                           </div>
                                                                                           <div className="items">
-                                                                                               <h6>additional 10 KG</h6>
+                                                                                               <h6>vượt 10 KG</h6>
                                                                                                <h5>$20.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
-                                                                                                         add
+                                                                                                         thêm
                                   </button>
                                                                                                </div>
                                                                                           </div>
                                                                                           <div className="items">
-                                                                                               <h6>additional 15 KG</h6>
+                                                                                               <h6>vượt 15 KG</h6>
                                                                                                <h5>$25.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
-                                                                                                         add
+                                                                                                         thêm
                                   </button>
                                                                                                </div>
                                                                                           </div>
                                                                                           <div className="items">
-                                                                                               <h6>additional 20 KG</h6>
+                                                                                               <h6>vượt 20 KG</h6>
                                                                                                <h5>$30.00</h5>
                                                                                                <div className="addtocart_btn">
                                                                                                     <button className="add-button add_cart" title="Add to cart" tabIndex={0}>
-                                                                                                         add
+                                                                                                         thêm
                                   </button>
                                                                                                </div>
                                                                                           </div>
@@ -564,45 +561,45 @@ export default class BookingAddOns extends Component {
                                         <div className="review-section">
                                              <div className="review_box">
                                                   <div className="title-top">
-                                                       <h5>travel addons</h5>
+                                                       <h5>bổ sung cho chuyến đi</h5>
                                                   </div>
                                                   <div className="flight_detail">
                                                        <div className="summery_box">
                                                             <table className="table table-borderless">
                                                                  <tbody>
                                                                       <tr>
-                                                                           <td>flight fare</td>
+                                                                           <td>vé chuyến bay</td>
                                                                            <td>$2500</td>
                                                                       </tr>
                                                                       <tr className="title">
-                                                                           <td>additional baggage</td>
+                                                                           <td>hành lý phát sinh</td>
                                                                       </tr>
                                                                       <tr>
-                                                                           <td>additional 15kg</td>
+                                                                           <td>vượt 15kg</td>
                                                                            <td>+ $25</td>
                                                                       </tr>
                                                                       <tr className="title">
-                                                                           <td>inflight meals</td>
+                                                                           <td>khẩu phần ăn trên chuyến bay</td>
                                                                       </tr>
                                                                       <tr>
-                                                                           <td>veg meal X (1)</td>
+                                                                           <td>khẩu phần ăn có rau X (1)</td>
                                                                            <td>+ $18</td>
                                                                       </tr>
                                                                       <tr>
-                                                                           <td>non-veg meal X (1)</td>
+                                                                           <td>khẩu phần ăn không rau X (1)</td>
                                                                            <td>+ $18</td>
                                                                       </tr>
                                                                       <tr className="title">
-                                                                           <td>seats</td>
+                                                                           <td>ghế ngồi</td>
                                                                       </tr>
                                                                       <tr>
-                                                                           <td>seat(10D)</td>
+                                                                           <td>ghế(10D)</td>
                                                                            <td>+ $5</td>
                                                                       </tr>
                                                                  </tbody>
                                                             </table>
                                                             <div className="grand_total">
-                                                                 <h5>grand total: <span>$2750</span></h5>
+                                                                 <h5>tổng cộng: <span>$2750</span></h5>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -612,13 +609,12 @@ export default class BookingAddOns extends Component {
                                              <div className="single-sidebar p-0">
                                                   <div className="newsletter-sec">
                                                        <div>
-                                                            <h4 className="title">always first</h4>
-                                                            <p>Be the first to find out latest tours and exclusive offers and get 15% off
-                    your first booking.</p>
+                                                            <h4 className="title">hãy là người đầu tiên</h4>
+                                                            <p>Trở thành người đầu tiên có những chuyến bay mới nhất và nhận ưu đãi độc quyền khi được giảm giá 15% cho chuyến đi của bạn.</p>
                                                             <form>
-                                                                 <input type="email" id="email1" className="form-control" placeholder="Enter your email" />
+                                                                 <input type="email" id="email1" className="form-control" placeholder="Nhập địa chỉ email..." />
                                                                  <div className="button">
-                                                                      <a href="#" className="btn btn-solid ">be the first</a>
+                                                                      <a href="#" className="btn btn-solid ">thực hiện ngay!!!</a>
                                                                  </div>
                                                             </form>
                                                        </div>
@@ -629,14 +625,14 @@ export default class BookingAddOns extends Component {
                               </div>
                          </div>
                          <div className="continue-btn">
-                              <Link type="submit" className="btn btn-solid" to={`${match.path}/bookingpayment`}>make payment</Link>
+                              <Link type="submit" className="btn btn-solid" to={`${match.path}/bookingpayment`}>Giao dịch</Link>
                          </div>
                     </div>
                </section>
 
                     <div className="book-panel">
-                         <h6 className="mb-0 text">grand total : <span>$2750</span></h6>
-                         <button type="button" onclick="window.location.href='flight-booking-payment.html'" className="btn bottom-btn theme-color">make payment</button>
+                         <h6 className="mb-0 text">tổng cộng : <span>$2750</span></h6>
+                         <button type="button" onclick="window.location.href='flight-booking-payment.html'" className="btn bottom-btn theme-color">Giao dịch</button>
                     </div>
 
                </div>

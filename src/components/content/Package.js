@@ -6,9 +6,9 @@ export default class Package extends Component {
                <section className="category-wrapper small-section bg-white">
                     <div className="container">
                          <div className="title-1 title-5">
-                              <span className="title-label">new offer</span>
-                              <h2>offers for you</h2>
-                              <p>View all live offers for your flight bookings</p>
+                              <span className="title-label">Ưu đãi mới</span>
+                              <h2>Ưu đãi dành cho bạn</h2>
+                              <p>Xem toàn bộ ưu đãi hiện có của bạn khi đặt vé</p>
                          </div>
                          <div className="row">
                               <div className="col">
@@ -23,7 +23,7 @@ export default class Package extends Component {
                                                        <div>
                                                             <div className="top">
                                                                  <a href="#">
-                                                                      <h3>10% cashback</h3>
+                                                                      <h3>hoàn tiền 10%</h3>
                                                                  </a>
                                                                  <h6>HDFC bank</h6>
                                                                  <div className="like-cls">
@@ -92,7 +92,7 @@ export default class Package extends Component {
                                                   <div className="category-content">
                                                        <div className="top">
                                                             <a href="#">
-                                                                 <h3>new year offer</h3>
+                                                                 <h3>ưu đãi năm mới</h3>
                                                             </a>
                                                             <h6>world bank</h6>
                                                             <div className="like-cls">

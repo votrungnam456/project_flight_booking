@@ -15,51 +15,51 @@ export default class SearchList extends Component {
                                                        <span>paris</span>
                                                   </i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right">
                                                        <div className="details">
-                                                            <span>tue, 19-Aug-2019</span>
+                                                            <span>T.Ba, ngày 19/08/2019</span>
                                                             <span className="divider">|</span>
-                                                            <span>2 Adults</span>
+                                                            <span>2 người lớn</span>
                                                        </div>
                                                        <div className="modify-search">
-                                                            <a href="javascript:void(0)" className="btn btn-solid color1"> modify search</a>
+                                                            <a href="javascript:void(0)" className="btn btn-solid color1">tìm kiếm tùy chọn</a>
                                                        </div>
                                                   </i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right">
                                                        <div className="flight-search-detail">
                                                             <form className="row m-0">
                                                                  <div className="col-lg-2">
                                                                       <div className="form-group">
-                                                                           <label>from</label>
+                                                                           <label>Từ</label>
                                                                            <input type="text" className="form-control open-select" id="exampleInputEmail1" defaultValue="dubai(DXB)" placeholder="from" />
                                                                            <img src="../assets/images/icon/from.png" className="img-fluid blur-up lazyload" alt />
                                                                       </div>
                                                                  </div>
                                                                  <div className="col-lg-2">
                                                                       <div className="form-group">
-                                                                           <label>to</label>
+                                                                           <label>Đến</label>
                                                                            <input type="text" className="form-control open-select" defaultValue="paris(PAR)" placeholder="to" />
                                                                            <img src="../assets/images/icon/location.png" className="img-fluid blur-up lazyload" alt />
                                                                       </div>
                                                                  </div>
                                                                  <div className="col-lg-2">
                                                                       <div className="form-group">
-                                                                           <label>departure date</label>
+                                                                           <label>Ngày khởi hành</label>
                                                                            <input placeholder="Depart Date" defaultValue="10/01/2019" id="datepicker" />
                                                                       </div>
                                                                  </div>
                                                                  <div className="col-lg-2">
                                                                       <div className="form-group">
-                                                                           <label>return date</label>
+                                                                           <label>Ngày trở về</label>
                                                                            <input placeholder="Return Date" id="datepicker1" />
                                                                       </div>
                                                                  </div>
                                                                  <div className="col-lg-2">
                                                                       <div className="form-group">
-                                                                           <label>traveller &amp; class</label>
+                                                                           <label>nhà lữ hành &amp; hạng</label>
                                                                            <input type="text" className="form-control  open-select" defaultValue="1 traveller" placeholder="to" />
                                                                            <img src="../assets/images/icon/user.png" className="img-fluid blur-up lazyload" alt />
                                                                            <div className="selector-box-flight">
                                                                                 <div className="room-cls">
                                                                                      <div className="qty-box">
-                                                                                          <label>adult</label>
+                                                                                          <label>người lớn</label>
                                                                                           <div className="input-group">
                                                                                                <button type="button" className="btn quantity-left-minus" data-type="minus" data-field> - </button>
                                                                                                <input type="text" name="quantity" className="form-control qty-input input-number" defaultValue="{1}" />
@@ -67,7 +67,7 @@ export default class SearchList extends Component {
                                                                                           </div>
                                                                                      </div>
                                                                                      <div className="qty-box">
-                                                                                          <label>children</label>
+                                                                                          <label>trẻ em</label>
                                                                                           <div className="input-group">
                                                                                                <button type="button" className="btn quantity-left-minus" data-type="minus" data-field> - </button>
                                                                                                <input type="text" name="quantity" className="form-control qty-input input-number" defaultValue="{1}" />
@@ -79,31 +79,31 @@ export default class SearchList extends Component {
                                                                                      <div className="form-check">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios1" defaultValue="option1" defaultchecked />
                                                                                           <label className="form-check-label" htmlFor="exampleRadios1">
-                                                                                               economy
+                                                                                               hạng phổ thông
                             </label>
                                                                                      </div>
                                                                                      <div className="form-check">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios2" defaultValue="option2" />
                                                                                           <label className="form-check-label" htmlFor="exampleRadios2">
-                                                                                               premium
+                                                                                               hạng cao cấp
                             </label>
                                                                                      </div>
                                                                                      <div className="form-check">
                                                                                           <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios3" defaultValue="option3" />
                                                                                           <label className="form-check-label" htmlFor="exampleRadios3">
-                                                                                               business
+                                                                                               hạng thương gia
                             </label>
                                                                                      </div>
                                                                                 </div>
                                                                                 <div className="bottom-part">
-                                                                                     <a href="javascript:void(0)" className="btn">apply</a>
+                                                                                     <a href="javascript:void(0)" className="btn">áp dụng</a>
                                                                                 </div>
                                                                            </div>
                                                                       </div>
                                                                  </div>
                                                                  <div className="col-lg-2">
                                                                       <div className="search-btn">
-                                                                           <a href="#" className="btn btn-solid color1">search</a>
+                                                                           <a href="#" className="btn btn-solid color1">tìm kiếm</a>
                                                                       </div>
                                                                  </div>
                                                                  <div className="responsive-close">

@@ -8,8 +8,8 @@ export default class Blog extends Component {
                     <div className="container">
                          <div className="title-1 title-5">
                               <span className="title-label">new</span>
-                              <h2>our blog</h2>
-                              <p>View travel &amp; airport stories</p>
+                              <h2>Blog của chúng tôi</h2>
+                              <p>Xem những câu chuyện về du lịch &amp; sân bay</p>
                          </div>
                          <div className="slide-2  no-arrow ">
                               <div>
@@ -27,12 +27,12 @@ export default class Blog extends Component {
                                         </div>
                                         <div className="blog-content">
                                              <div>
-                                                  <h5>january 9, 2019</h5>
-                                                  <p>Lorem Ipsum is simply the
-                                                  of the printing and
-                dummy text of typesetting..</p>
-                                                  <h6>Lorem Ipsum is simply dummy since..</h6>
-                                                  <a href="blog-detail-video.html" className="btn btn-rounded btn-sm color1">read more</a>
+                                                  <h5>09 tháng 02, 2019</h5>
+                                                  <p>Lorem Ipsum đơn giản là
+                                                  một ngành công nghiệp về in ấn
+                văn bản giả..</p>
+                                                  <h6>Lorem Ipsum đã trở thành tiêu chuẩn...</h6>
+                                                  <a href="blog-detail-video.html" className="btn btn-rounded btn-sm color1">đọc thêm</a>
                                              </div>
                                         </div>
                                    </div>

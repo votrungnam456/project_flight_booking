@@ -8,10 +8,9 @@ export default class BookingFailed extends Component {
                          <div className="row success-detail mt-0">
                               <div className="col">
                                    <img src="../assets/images/icon/failure-icon.png" className="img-fluid blur-up lazyload" alt />
-                                   <h2>oops ! we are unable to process your payment</h2>
-                                   <p>looks like we encountered an error. please try again. if you continue to have issue, try another
-          payment method.</p>
-                                   <button type="submit" className="btn btn-solid color1">try again</button>
+                                   <h2>Xin lỗi, chúng tôi không thể thực hiện việc thanh toán</h2>
+                                   <p>Có vẻ chúng tôi đã gặp một vài lỗi. vui lòng thử lại sau. nếu bạn vẫn tiếp tục gặp lỗi này, vui lòng thử phương thức thanh toán khác.</p>
+                                   <button type="submit" className="btn btn-solid color1">thử lại</button>
                               </div>
                          </div>
                     </div>

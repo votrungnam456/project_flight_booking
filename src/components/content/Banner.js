@@ -16,13 +16,13 @@ export default class Banner extends Component {
                                    <div className="col-lg-5 offset-lg-1">
                                         <div className="banner-content">
                                              <div>
-                                                  <h5>special nature tour offer</h5>
-                                                  <h2>discount <span>20-30%</span></h2>
-                                                  <p>Lorem Ipsum is simply dummy text of the printing and type setti ng industry.
-                                                  Lorem Ipsum has been the of industry standard dum my text ever since the 1500s,</p>
+                                                  <h5>ưu đãi đặc biệt, tour du lịch thiên nhiên</h5>
+                                                  <h2>chiết khấu <span>20-30%</span></h2>
+                                                  <p>Lorem Ipsum đơn giản là một ngành công nghiệp in ấn văn bản giả.
+                                                  Lorem Ipsum đã trở thành tiêu chuẩn của ngành công nghiệp từ những năm 1500,</p>
                                                   <h2 className="price">$420</h2>
                                                   <div className="bottom-section">
-                                                       <a href="flight-booking.html" className="btn btn-rounded btn-sm color1">buy now</a>
+                                                       <a href="flight-booking.html" className="btn btn-rounded btn-sm color1">mua ngay</a>
                                                   </div>
                                              </div>
                                         </div>

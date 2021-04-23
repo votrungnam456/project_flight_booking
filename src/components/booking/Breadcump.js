@@ -11,9 +11,9 @@ export default class Breadcump extends Component {
                                    <div className="col">
                                         <nav aria-label="breadcrumb" className="theme-breadcrumb">
                                              <ol className="breadcrumb">
-                                                  <li className="breadcrumb-item"><a href="flight-layout.html">Home</a></li>
-                                                  <li className="breadcrumb-item"><a href="flight-right-sidebar.html">flights</a></li>
-                                                  <li className="breadcrumb-item active">review</li>
+                                                  <li className="breadcrumb-item"><a href="flight-layout.html">Trang chủ</a></li>
+                                                  <li className="breadcrumb-item"><a href="flight-right-sidebar.html">Chuyến bay</a></li>
+                                                  <li className="breadcrumb-item active">Xem trước</li>
                                              </ol>
                                         </nav>
                                    </div>

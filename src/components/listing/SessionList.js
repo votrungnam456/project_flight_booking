@@ -47,45 +47,45 @@ export default class SessionList extends Component {
                                         <ul>
                                              <li className="back-btn">
                                                   <div className="mobile_back text-right">
-                                                       <span>Back</span>
+                                                       <span>Trở về</span>
                                                        <i aria-hidden="true" className="fa fa-angle-right pl-2" />
                                                   </div>
                                              </li>
                                              <li className="filter-title">
-                                                  <h6>filter :</h6>
+                                                  <h6>Lọc :</h6>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>stops</h6>
+                                                  <h6>Chặn dừng</h6>
                                                   <div className="onclick-content">
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="free-d" />
-                                                            <label className="custom-control-label" htmlFor="free-d">non stop</label>
+                                                            <label className="custom-control-label" htmlFor="free-d">không có</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="time" />
-                                                            <label className="custom-control-label" htmlFor="time">1 stop</label>
+                                                            <label className="custom-control-label" htmlFor="time">1 chặn</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="zara" />
-                                                            <label className="custom-control-label" htmlFor="zara">2 stop</label>
+                                                            <label className="custom-control-label" htmlFor="zara">2 chặn</label>
                                                        </div>
                                                   </div>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>fare type</h6>
+                                                  <h6>loại phí</h6>
                                                   <div className="onclick-content">
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="refundable" />
-                                                            <label className="custom-control-label" htmlFor="refundable">refundable</label>
+                                                            <label className="custom-control-label" htmlFor="refundable">có thể hoàn tiền</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="non" />
-                                                            <label className="custom-control-label" htmlFor="non">non-refundable</label>
+                                                            <label className="custom-control-label" htmlFor="non">không thể hoàn tiền</label>
                                                        </div>
                                                   </div>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>price</h6>
+                                                  <h6>giá</h6>
                                                   <div className="onclick-content">
                                                        <div className="wrapper">
                                                             <div className="range-slider">
@@ -95,7 +95,7 @@ export default class SessionList extends Component {
                                                   </div>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>airlines</h6>
+                                                  <h6>Hãng bay</h6>
                                                   <div className="onclick-content">
                                                        <div className="collection-brand-filter">
                                                             <div className="custom-control custom-checkbox collection-filter-checkbox">
@@ -130,38 +130,38 @@ export default class SessionList extends Component {
                                                   </div>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>departure</h6>
+                                                  <h6>Khởi hành</h6>
                                                   <div className="onclick-content">
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="suomi" />
-                                                            <label className="custom-control-label" htmlFor="suomi"><img src="../assets/images/icon/time/sunrise.png" className="img-fluid blur-up lazyload mr-1" alt /> 6am to 12pm</label>
+                                                            <label className="custom-control-label" htmlFor="suomi"><img src="../assets/images/icon/time/sunrise.png" className="img-fluid blur-up lazyload mr-1" alt /> 6 giờ đến 12 giờ</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="english" />
                                                             <label className="custom-control-label" htmlFor="english"><img src="../assets/images/icon/time/sun.png" className="img-fluid blur-up lazyload mr-1" alt />
-                    12pm to 6pm</label>
+                    12 giờ đến 18 giờ</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="sign" />
-                                                            <label className="custom-control-label" htmlFor="sign"><img src="../assets/images/icon/time/night.png" className="img-fluid blur-up lazyload mr-1" alt /> after 6pm</label>
+                                                            <label className="custom-control-label" htmlFor="sign"><img src="../assets/images/icon/time/night.png" className="img-fluid blur-up lazyload mr-1" alt /> sau 18 giờ</label>
                                                        </div>
                                                   </div>
                                              </li>
                                              <li className="onclick-title">
-                                                  <h6>arrival</h6>
+                                                  <h6>Đích đến</h6>
                                                   <div className="onclick-content">
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="morning" />
-                                                            <label className="custom-control-label" htmlFor="morning"><img src="../assets/images/icon/time/sunrise.png" className="img-fluid blur-up lazyload mr-1" alt /> 6am to 12pm</label>
+                                                            <label className="custom-control-label" htmlFor="morning"><img src="../assets/images/icon/time/sunrise.png" className="img-fluid blur-up lazyload mr-1" alt />6 giờ đến 12 giờ</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="noon" />
                                                             <label className="custom-control-label" htmlFor="noon"><img src="../assets/images/icon/time/sun.png" className="img-fluid blur-up lazyload mr-1" alt />
-                    12pm to 6pm</label>
+                    12 giờ đến 18 giờ</label>
                                                        </div>
                                                        <div className="custom-control custom-checkbox collection-filter-checkbox">
                                                             <input type="checkbox" className="custom-control-input" id="evening" />
-                                                            <label className="custom-control-label" htmlFor="evening"><img src="../assets/images/icon/time/night.png" className="img-fluid blur-up lazyload mr-1" alt /> after 6pm</label>
+                                                            <label className="custom-control-label" htmlFor="evening"><img src="../assets/images/icon/time/night.png" className="img-fluid blur-up lazyload mr-1" alt /> sau 18 giờ</label>
                                                        </div>
                                                   </div>
                                              </li>
@@ -170,7 +170,7 @@ export default class SessionList extends Component {
                               </div>
                               <div className="col-lg-12 ratio3_2">
                                    <a href="javascript:void(0)" className="mobile-filter border-top-0">
-                                        <h5>latest filter</h5>
+                                        <h5>bộ lọc mới nhất</h5>
                                         <img src="../assets/images/icon/adjust.png" className="img-fluid blur-up lazyload" alt />
                                    </a>
                                    <div className="flight-detail-sec full_width-detail">
@@ -193,7 +193,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -206,13 +206,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -235,7 +235,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -248,13 +248,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -277,7 +277,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -290,13 +290,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -319,7 +319,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -332,13 +332,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -361,7 +361,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -374,13 +374,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -403,7 +403,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -416,13 +416,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -445,7 +445,7 @@ export default class SessionList extends Component {
                                                                       <i className="fas fa-plane-departure float-left" />
                                                                       <i className="fas fa-plane-arrival float-right" />
                                                                       <div className="stop">
-                                                                           30h 20m (1 stop)
+                                                                           30 giờ 20 phút (1 chặn dừng)
                       </div>
                                                                  </div>
                                                                  <div className="airport-name arrival">
@@ -458,13 +458,13 @@ export default class SessionList extends Component {
                                                             <div className="price">
                                                                  <div>
                                                                       <h4>$1200</h4>
-                                                                      <span>non refundable</span>
+                                                                      <span>không hoàn tiền</span>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                        <div className="col-xl-2 col-md-3">
                                                             <div className="book-flight">
-                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">book now</a>
+                                                                 <a href="flight-booking.html#" className="btn btn-solid color1 ">đặt vé ngay</a>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -476,7 +476,7 @@ export default class SessionList extends Component {
                                              <li className="page-item">
                                                   <a className="page-link" href="javascript:void(0)" aria-label="Previous">
                                                        <span aria-hidden="true">«</span>
-                                                       <span className="sr-only">Previous</span>
+                                                       <span className="sr-only">Quay lại</span>
                                                   </a>
                                              </li>
                                              <li className="page-item active"><a className="page-link" href="javascript:void(0)">1</a></li>
@@ -485,7 +485,7 @@ export default class SessionList extends Component {
                                              <li className="page-item">
                                                   <a className="page-link" href="#" aria-label="Next">
                                                        <span aria-hidden="true">»</span>
-                                                       <span className="sr-only">Next</span>
+                                                       <span className="sr-only">Kế tiếp</span>
                                                   </a>
                                              </li>
                                         </ul>

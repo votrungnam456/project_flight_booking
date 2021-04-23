@@ -7,8 +7,8 @@ export default class Offer extends Component {
                     <div className="container">
                          <div className="title-1 title-5">
                               <span className="title-label">rica</span>
-                              <h2>best deals</h2>
-                              <p>View all live offers for your flight bookings</p>
+                              <h2>giao dịch tốt nhất</h2>
+                              <p>Xem toàn bộ ưu đãi hiện có cho chuyến đi của bạn</p>
                          </div>
                          <div className="row">
                               <div className="col">
@@ -25,7 +25,7 @@ export default class Offer extends Component {
                                                             <a href="flight-top-filter.html"><img src="../assets/images/flights/offer/6.jpg" className="img-fluid blur-up lazyload"  alt="true" /></a>
                                                             <div className="content">
                                                                  <a href="#">
-                                                                      <h5>norway</h5>
+                                                                      <h5>na uy</h5>
                                                                  </a>
                                                                  <p>Dep: paris, dubai</p>
                                                                  <h6><del>$250</del> $200</h6>
@@ -35,7 +35,7 @@ export default class Offer extends Component {
                                                             <a href="flight-top-filter.html"><img src="../assets/images/flights/offer/7.jpg" className="img-fluid blur-up lazyload"  alt="true" /></a>
                                                             <div className="content">
                                                                  <a href="#">
-                                                                      <h5>finland</h5>
+                                                                      <h5>phần lan</h5>
                                                                  </a>
                                                                  <p>Dep: paris, dubai</p>
                                                                  <h6><del>$250</del> $200</h6>
@@ -86,7 +86,7 @@ export default class Offer extends Component {
                                                             <a href="flight-top-filter.html"><img src="../assets/images/flights/offer/6.jpg" className="img-fluid blur-up lazyload"  alt="true" /></a>
                                                             <div className="content">
                                                                  <a href="#">
-                                                                      <h5>norway</h5>
+                                                                      <h5>na uy</h5>
                                                                  </a>
                                                                  <p>Dep: paris, dubai</p>
                                                                  <h6><del>$250</del> $200</h6>
@@ -117,7 +117,7 @@ export default class Offer extends Component {
                                                             <a href="flight-top-filter.html"><img src="../assets/images/flights/offer/6.jpg" className="img-fluid blur-up lazyload"  alt="true" /></a>
                                                             <div className="content">
                                                                  <a href="#">
-                                                                      <h5>norway</h5>
+                                                                      <h5>na uy</h5>
                                                                  </a>
                                                                  <p>Dep: paris, dubai</p>
                                                                  <h6><del>$250</del> $200</h6>
@@ -168,7 +168,7 @@ export default class Offer extends Component {
                                                             <a href="flight-top-filter.html"><img src="../assets/images/flights/offer/6.jpg" className="img-fluid blur-up lazyload"  alt="true" /></a>
                                                             <div className="content">
                                                                  <a href="#">
-                                                                      <h5>norway</h5>
+                                                                      <h5>na uy</h5>
                                                                  </a>
                                                                  <p>Dep: paris, dubai</p>
                                                                  <h6><del>$250</del> $200</h6>
