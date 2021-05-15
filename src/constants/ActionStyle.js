@@ -1,0 +1,3 @@
+export const FETCH_SANBAY = 'FETCH_SANBAY';
+export const SEARCH_FLIGHT = 'SEARCH_FLIGHT';
+export const FIND_ONE_CHUYENBAY = 'FIND_ONE_CHUYENBAY';

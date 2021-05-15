@@ -4,7 +4,6 @@ import Breadcump from './Breadcump'
 
 export default class Booking extends Component {
      render() {
-          console.log(this.props.location)
           return (
                <div>
                     <Breadcump/>

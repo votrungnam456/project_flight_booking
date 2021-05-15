@@ -14,7 +14,7 @@ const menus = [
         exact: true
     },
     {
-        name: "Đặt vé",
+        name: "Đăng nhập/Đăng ký",
         to: "/booking",
         exact: true
     }

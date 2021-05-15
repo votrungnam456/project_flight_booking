@@ -1,122 +1,222 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-export default class SearchList extends Component {
-     render() {
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
+
+class SearchList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sanBayDiID: null,
+      sanBayDenID: null,
+      ngayDi: null,
+      ngayVe: null,
+      hanhTrinh: null,
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchSanBays();
+  }
+
+  handleChange(event) {
+    event.preventDefault();
+    var target = event.target;
+    var name = target.name;
+    var value = target.type === "checkbox" ? target.checked : target.value;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  onSearch = (event) => {
+    event.preventDefault();
+    console.log(this.state);
+    if(this.state.sanBayDiID == null || this.state.sanBayDenID == null || this.state.ngayDi == null || this.state.ngayVe == null)
+    {
+       return;
+    }
+    this.props.searchFlights(this.state);
+  };
+
+  render() {
+    var flights = this.props.data;
+    return (
+      <div>
+        <div>
+          <div className="bg-inner small-section pb-0">
+            <div className="container">
+              <div className="flight-search">
+                <div className="flight-search-detail">
+                  <form className="row m-0" onSubmit={this.onSearch}>
+                    <div className="col-lg-2">
+                      <div className="form-group">
+                        <label>Từ</label>
+                        <select
+                          name="sanBayDiID"
+                          className="form-control open-select"
+                          value={this.state.sanBayDiID}
+                          onChange={this.handleChange}
+                        >
+                          {this.showSanBayDi(flights)}
+                        </select>
+                        <img
+                          src="../assets/images/icon/from.png"
+                          className="img-fluid blur-up lazyload"
+                          alt
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-2">
+                      <div className="form-group">
+                        <label>Đến</label>
+                        <select
+                          name="sanBayDenID"
+                          className="form-control open-select"
+                          value={this.state.sanBayDenID}
+                          onChange={this.handleChange}
+                        >
+                          {this.showSanBayDen(flights, this.state.sanBayDiID)}
+                        </select>
+                        <img
+                          src="../assets/images/icon/location.png"
+                          className="img-fluid blur-up lazyload"
+                          alt
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-2">
+                      <div className="form-group">
+                        <label>Ngày khởi hành</label>
+                        <input
+                          name="ngayDi"
+                          placeholder="Depart Date"
+                          id="datepicker"
+                          className="form-control open-select"
+                          type="date"
+                          min={this.getDate()}
+                          max="2030-01-01"
+                          value={this.state.ngayDi}
+                          onChange={this.handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-2">
+                      {this.showNgayVe()}
+                    </div>
+                    <div className="col-lg-2">
+                      <div className="form-group">
+                        <label>Loại hành trình</label>
+                        <select
+                          name="hanhTrinh"
+                          className="form-control open-select"
+                          value={this.state.hanhTrinh}
+                          onChange={this.handleChange}
+                        >
+                          <option value="KH">Khứ hồi</option>
+                          <option value="MC">Một chiều</option>
+                        </select>
+                        <img
+                          src="../assets/images/icon/user.png"
+                          className="img-fluid blur-up lazyload"
+                          alt
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-2">
+                      <div className="search-btn">
+                        
+                        <button type="submit" className="btn btn-solid color1">
+                        tìm kiếm
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  showNgayVe = () => {
+    if(this.state.hanhTrinh == "KH")
+    {
+      return <div className="form-group">
+              <label>Ngày trở về</label>
+              <input
+                name="ngayVe"
+                className="form-control open-select"
+                type="date"
+                min={this.state.ngayDi}
+                max="2022-01-01"
+                placeholder="Return Date"
+                id="datepicker1"
+                value={this.state.ngayVe}
+                onChange={this.handleChange}
+              />
+            </div>
+    }
+  }
+
+  getDate = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = today.getFullYear();
+
+    return (today = yyyy + "-" + mm + "-" + dd);
+  };
+
+  showSanBayDi = (flights) => {
+    var result = null;
+    if (flights) {
+      result = flights.map((item, index) => {
+        return (
+          <option key={index} value={item.id}>
+            {item.tenSanBay}
+          </option>
+        );
+      });
+    }
+    return result;
+  };
+
+  showSanBayDen = (flights, id) => {
+    var result = null;
+    if (flights) {
+      result = flights.map((item, index) => {
+        if (item.id != id) {
           return (
-               <div>
-                    <div>
-                         <div className="bg-inner small-section pb-0">
-                              <div className="container">
-                                   <div className="flight-search">
-                                        <div className="responsive-detail">
-                                             <div className="destination">
-                                                  <span>dubai</span>
-                                                  <span><i className="fas fa-long-arrow-alt-right" /></span><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right">
-                                                       <span>paris</span>
-                                                  </i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right">
-                                                       <div className="details">
-                                                            <span>T.Ba, ngày 19/08/2019</span>
-                                                            <span className="divider">|</span>
-                                                            <span>2 người lớn</span>
-                                                       </div>
-                                                       <div className="modify-search">
-                                                            <a href="javascript:void(0)" className="btn btn-solid color1">tìm kiếm tùy chọn</a>
-                                                       </div>
-                                                  </i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right">
-                                                       <div className="flight-search-detail">
-                                                            <form className="row m-0">
-                                                                 <div className="col-lg-2">
-                                                                      <div className="form-group">
-                                                                           <label>Từ</label>
-                                                                           <input type="text" className="form-control open-select" id="exampleInputEmail1" defaultValue="dubai(DXB)" placeholder="from" />
-                                                                           <img src="../assets/images/icon/from.png" className="img-fluid blur-up lazyload" alt />
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="col-lg-2">
-                                                                      <div className="form-group">
-                                                                           <label>Đến</label>
-                                                                           <input type="text" className="form-control open-select" defaultValue="paris(PAR)" placeholder="to" />
-                                                                           <img src="../assets/images/icon/location.png" className="img-fluid blur-up lazyload" alt />
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="col-lg-2">
-                                                                      <div className="form-group">
-                                                                           <label>Ngày khởi hành</label>
-                                                                           <input placeholder="Depart Date" defaultValue="10/01/2019" id="datepicker" />
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="col-lg-2">
-                                                                      <div className="form-group">
-                                                                           <label>Ngày trở về</label>
-                                                                           <input placeholder="Return Date" id="datepicker1" />
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="col-lg-2">
-                                                                      <div className="form-group">
-                                                                           <label>nhà lữ hành &amp; hạng</label>
-                                                                           <input type="text" className="form-control  open-select" defaultValue="1 traveller" placeholder="to" />
-                                                                           <img src="../assets/images/icon/user.png" className="img-fluid blur-up lazyload" alt />
-                                                                           <div className="selector-box-flight">
-                                                                                <div className="room-cls">
-                                                                                     <div className="qty-box">
-                                                                                          <label>người lớn</label>
-                                                                                          <div className="input-group">
-                                                                                               <button type="button" className="btn quantity-left-minus" data-type="minus" data-field> - </button>
-                                                                                               <input type="text" name="quantity" className="form-control qty-input input-number" defaultValue="{1}" />
-                                                                                               <button type="button" className="btn quantity-right-plus" data-type="plus" data-field>+</button>
-                                                                                          </div>
-                                                                                     </div>
-                                                                                     <div className="qty-box">
-                                                                                          <label>trẻ em</label>
-                                                                                          <div className="input-group">
-                                                                                               <button type="button" className="btn quantity-left-minus" data-type="minus" data-field> - </button>
-                                                                                               <input type="text" name="quantity" className="form-control qty-input input-number" defaultValue="{1}" />
-                                                                                               <button type="button" className="btn quantity-right-plus" data-type="plus" data-field> + </button>
-                                                                                          </div>
-                                                                                     </div>
-                                                                                </div>
-                                                                                <div className="flight-class">
-                                                                                     <div className="form-check">
-                                                                                          <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios1" defaultValue="option1" defaultchecked />
-                                                                                          <label className="form-check-label" htmlFor="exampleRadios1">
-                                                                                               hạng phổ thông
-                            </label>
-                                                                                     </div>
-                                                                                     <div className="form-check">
-                                                                                          <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios2" defaultValue="option2" />
-                                                                                          <label className="form-check-label" htmlFor="exampleRadios2">
-                                                                                               hạng cao cấp
-                            </label>
-                                                                                     </div>
-                                                                                     <div className="form-check">
-                                                                                          <input className="form-check-input radio_animated" type="radio" name="exampleRadios" id="exampleRadios3" defaultValue="option3" />
-                                                                                          <label className="form-check-label" htmlFor="exampleRadios3">
-                                                                                               hạng thương gia
-                            </label>
-                                                                                     </div>
-                                                                                </div>
-                                                                                <div className="bottom-part">
-                                                                                     <a href="javascript:void(0)" className="btn">áp dụng</a>
-                                                                                </div>
-                                                                           </div>
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="col-lg-2">
-                                                                      <div className="search-btn">
-                                                                           <a href="#" className="btn btn-solid color1">tìm kiếm</a>
-                                                                      </div>
-                                                                 </div>
-                                                                 <div className="responsive-close">
-                                                                      <i className="far fa-times-circle">
-                                                                      </i></div><i className="far fa-times-circle">
-                                                                 </i></form></div><i className="far fa-times-circle">
-                                                       </i></i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right"><i className="far fa-times-circle">
-                                                       </i></i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right"><i className="far fa-times-circle">
-                                                       </i></i></i></div><i className="fas fa-long-arrow-alt-right"><i className="fas fa-long-arrow-alt-right"><i className="far fa-times-circle">
-                                                       </i></i></i></div><i className="fas fa-long-arrow-alt-right">
-                    </i></div>
-
-
-          )
-     }
+            <option key={index} value={item.id}>
+              {item.tenSanBay}
+            </option>
+          );
+        }
+      });
+    }
+    return result;
+  };
 }
+
+var mapStateToProps = (state) => {
+  return {
+    data: state.sanbay,
+  };
+};
+
+var mapDispatchToProps = (dispatch, props) => {
+  return {
+    fetchSanBays: () => {
+      dispatch(actions.actFetchSanBaysCallApi());
+    },
+    searchFlights: (flight) => {
+      dispatch(actions.actSearchFlightsCallApi(flight));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchList);

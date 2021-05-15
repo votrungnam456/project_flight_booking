@@ -18,8 +18,8 @@ const routes = [
           main: () => <Home></Home>
      },
      {
-          path: '/booking',
-          exact: true,
+          path: '/booking/:id',
+          exact: false,
           main: ({match,location}) => <Booking location={location} match={match}></Booking>
      },
      {
@@ -57,16 +57,6 @@ const routes = [
           exact: true,
           main: () => <BookingFailed></BookingFailed>
      },
-//     {
-//         path : '/products',
-//         exact : false,
-//         main: ({match,location}) => <Products match={match} location={location}></Products>
-//     },
-//     {
-//         path : '/login',
-//         exact : false,
-//         main: ({location}) => <Login location={location}></Login>
-//     },
      {
           path: '',
           exact: false,
