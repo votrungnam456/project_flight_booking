@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 
-export default class BookingSuccess extends Component {
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
+
+class BookingSuccess extends Component {
      render() {
+          let {booking} = this.props;
           return (
                <section className="bg-inner section-b-space success-section">
                     <div className="container">
@@ -39,7 +43,7 @@ export default class BookingSuccess extends Component {
                               <div className="col">
                                    <h2>Giao dịch thành công! Vui lòng chuẩn bị trước chuyến bay!</h2>
                                    <p>Cảm ơn bạn đã thanh toán. Chúng tôi đã nhận được khoản thanh toán bạn gửi. Mã giao dịch của bạn là
-          "SHJG12155215", bạn sẽ sớm nhận được email kèm hóa đơn!</p>
+          "{booking.maVe}", bạn sẽ sớm nhận được email kèm hóa đơn!</p>
                                    <button type="submit" className="btn btn-solid color1">tải về hóa đơn</button>
                               </div>
                          </div>
@@ -49,3 +53,16 @@ export default class BookingSuccess extends Component {
           )
      }
 }
+
+var mapStateToProps = (state) => {
+     return {
+          booking: state.booking,
+     };
+   };
+   
+var mapDispatchToProps = (dispatch, props) => {
+     return {
+     };
+   };
+   
+   export default connect(mapStateToProps, mapDispatchToProps)(BookingSuccess);

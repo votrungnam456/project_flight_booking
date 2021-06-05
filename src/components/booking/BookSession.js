@@ -7,18 +7,41 @@ import * as actions from "../../actions/index";
 class BookSession extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      ho: null,
+      ten: null,
+      cmnd: null,
+      sdt: null,
+      email: null,
+      booking: null
+    }
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillMount() {
     let { match } = this.props;
-    this.props.findOneChuyenBay(match.params.id);
+    this.props.findOneChuyenBay(match.params.id, match.params.idVe);
+  }
+
+  handleChange(event) {
+    event.preventDefault();
+    var target = event.target;
+    var name = target.name;
+    var value = target.type === "checkbox" ? target.checked : target.value;
+    this.setState({
+      [name]: value,
+    });
+    localStorage.setItem("INFO_BOOKING", JSON.stringify(this.state));
+    console.log(this.state);
   }
 
   render() {
-    let { chuyenbay, match } = this.props;
-    var d2 = new Date();
-    d2.setTime(chuyenbay.ngayGio);
-
+    let { chuyenbay, match, user, history } = this.props;
+    localStorage.setItem("GIA_IDVE", JSON.stringify({gia : parseInt(chuyenbay.donGia) + 120000 + 50000, idVe : match.params.idVe}));
+    
+    if (user.hoTen == undefined) {
+      history.replace("/login?id=1");
+    }
 
     return (
       <div>
@@ -35,7 +58,7 @@ class BookSession extends Component {
                       <div className="row">
                         <div className="col-md-3">
                           <div className="logo-sec">
-                          {this.showImgHangBay(chuyenbay.hangVe)}
+                            {this.showImgHangBay(chuyenbay.hangVe)}
                             <span className="title">{chuyenbay.hangVe}</span>
                           </div>
                         </div>
@@ -43,7 +66,7 @@ class BookSession extends Component {
                           <div className="airport-part">
                             <div className="airport-name">
                               <h6>
-                                {chuyenbay.codeSanDi} <span>17.00</span>
+                                {chuyenbay.codeSanDi} <span>{chuyenbay.gio}</span>
                               </h6>
                             </div>
                             <div className="airport-progress">
@@ -52,7 +75,7 @@ class BookSession extends Component {
                             </div>
                             <div className="airport-name arrival">
                               <h6>
-                              {chuyenbay.codeSanDen} <span>17.00</span>
+                              {chuyenbay.codeSanDen} <span>{this.converTime(chuyenbay.gio, chuyenbay.thoiGianBay)}</span>
                               </h6>
                             </div>
                           </div>
@@ -60,7 +83,7 @@ class BookSession extends Component {
                         <div className="col-md-3">
                           <div className="duration">
                             <div>
-                              <h6>{d2.toString()}</h6>
+                              <h6>{chuyenbay.ngay}</h6>
                               <p>1 chặn dừng</p>
                             </div>
                           </div>
@@ -98,7 +121,7 @@ class BookSession extends Component {
                     <div className="flight_detail">
                       <div className="row form_flight">
                         <div className="col-md-12">
-                          <form>
+                          <form onSubmit={this.onSaveInfo}>
                             <h6>người bay</h6>
                             <div className="form-row">
                               <div className="form-group col-md-2">
@@ -115,30 +138,38 @@ class BookSession extends Component {
                               <div className="form-group col-md-5">
                                 <label htmlFor="first">Tên</label>
                                 <input
+                                  name="ten"
                                   type="text"
                                   className="form-control"
                                   id="firstt"
+                                  value={this.state.ten}
+                                  onChange={this.handleChange}
                                 />
                               </div>
                               <div className="form-group col-md-5">
                                 <label htmlFor="last">Họ</label>
                                 <input
+                                  name="ho"
                                   type="text"
                                   className="form-control"
                                   id="lastt"
+                                  value={this.state.ho}
+                                  onChange={this.handleChange}
                                 />
                               </div>
                             </div>
-                          </form>
-                          <form>
+                            <br></br>
                             <h6>thông tin liên lạc</h6>
                             <div className="form-row">
                               <div className="form-group col-md-6">
                                 <label htmlFor="inputEmail4">Email</label>
                                 <input
+                                  name="email"
                                   type="email"
                                   className="form-control"
                                   id="inputEmail4"
+                                  value={this.state.email}
+                                  onChange={this.handleChange}
                                 />
                               </div>
                               <div className="form-group col-md-6">
@@ -146,9 +177,12 @@ class BookSession extends Component {
                                   Số điện thoại
                                 </label>
                                 <input
+                                  name="sdt"
                                   type="number"
                                   className="form-control"
                                   id="inputnumber"
+                                  value={this.state.sdt}
+                                  onChange={this.handleChange}
                                 />
                               </div>
                               <div className="form-group col-md-6">
@@ -156,9 +190,25 @@ class BookSession extends Component {
                                   CMND
                                 </label>
                                 <input
+                                  name="cmnd"
                                   type="text"
                                   className="form-control"
+                                  value={this.state.cmnd}
+                                  onChange={this.handleChange}
                                 />
+                              </div>
+                              <div className="form-group col-md-2">
+                                <label htmlFor="inputState">Đặt cho: </label>
+                                <select
+                                  name="booking"
+                                  id="inputState"
+                                  className="form-control"
+                                  onChange={this.handleChange}
+                                >
+                                  <option>cho ...</option>
+                                  <option value="BT">Bản thân</option>
+                                  <option value="NT">Người thân</option>
+                                </select>
                               </div>
                             </div>
                           </form>
@@ -181,7 +231,7 @@ class BookSession extends Component {
                             <tbody>
                               <tr>
                                 <td>Người lớn</td>
-                                <td> {parseInt(chuyenbay.donGiaPT)} VND</td>
+                                <td> {parseInt(chuyenbay.donGia)} VND</td>
                               </tr>
                               <tr>
                                 <td>Thuế</td>
@@ -195,7 +245,7 @@ class BookSession extends Component {
                           </table>
                           <div className="grand_total">
                             <h5>
-                              thành tiền: <span>{parseInt(chuyenbay.donGiaPT) + 120000 + 50000} VND</span>
+                              thành tiền: <span>{parseInt(chuyenbay.donGia) + 120000 + 50000} VND</span>
                             </h5>
                           </div>
                         </div>
@@ -209,7 +259,7 @@ class BookSession extends Component {
               <Link
                 type="submit"
                 className="btn btn-solid"
-                to={`/bookingsession/bookingaddons`}
+                to={`/bookingpayment/`}
               >
                 tiếp tục đặt vé
               </Link>
@@ -218,6 +268,21 @@ class BookSession extends Component {
         </section>
       </div>
     );
+  }
+
+  converTime = (gio, thoiGianBay) => {
+    var h = parseInt(gio);
+    var time = parseInt(thoiGianBay);
+
+    var result = time + h;
+    if(result > 23) {
+      result -= 23;
+    }
+    if(result < 10) {
+      return "0" + result + ".00"
+    } else {
+      return result + ".00"
+    }
   }
 
   showImgHangBay = (hangBay) => {
@@ -246,13 +311,14 @@ class BookSession extends Component {
 var mapStateToProps = (state) => {
   return {
     chuyenbay: state.chuyenbay,
+    user : state.user,
   };
 };
 
 var mapDispatchToProps = (dispatch, props) => {
   return {
-    findOneChuyenBay: (id) => {
-      dispatch(actions.actFindOneChuyenBayCallApi(id));
+    findOneChuyenBay: (id, idVe) => {
+      dispatch(actions.actFindOneChuyenBayCallApi(id, idVe));
     },
   };
 };

@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
-
 import { Route, Link } from 'react-router-dom'
 
-const menus = [
-    {
-        name: "Trang chủ",
-        to: "/",
-        exact: true
-    },
-    {
-        name: "Danh sách vé máy bay",
-        to: "/listing",
-        exact: true
-    },
-    {
-        name: "Đăng nhập/Đăng ký",
-        to: "/booking",
-        exact: true
-    }
-]
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
+
 
 const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
     return (
@@ -35,16 +20,40 @@ const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
 
 class Menu extends Component {
     render() {
+        let {user} =  this.props;
+
+        var menus = [
+            {
+                name: "Trang chủ",
+                to: "/",
+                exact: true
+            },
+            {
+                name: "Danh sách vé máy bay",
+                to: "/listing",
+                exact: true
+            },
+            {
+                name: "Đăng nhập/Đăng ký",
+                to: "/login",
+                exact: true
+            }
+        ]
+
+        if(user.hoTen != undefined)
+        {
+            menus.push(
+                {
+                    name: "Đăng xuất",
+                    to: "/login",
+                    exact: true
+                })
+            menus[2].name = "Xin chào: " + user.hoTen;
+            menus[2].to = "/";
+        }
+
         return (
             <div>
-
-                {/*<!--Màn hình chờ - mở -->*/}
-                {/* <div className="loader-wrapper img-gif">
-                    <img src="../assets/images/loader.gif" alt="" />
-                </div> */}
-                {/*<!-- Màn hình chờ - đóng -->*/}
-
-                {/*<!--Menu - mở -->*/}
                 <header className="overlay-black">
                     <div className="container">
                         <div className="row">
@@ -92,4 +101,18 @@ class Menu extends Component {
     }
 }
 
-export default Menu;
+var mapStateToProps = (state) => {
+    return {
+      user: state.user,
+    };
+  };
+  
+  var mapDispatchToProps = (dispatch, props) => {
+    return {
+        logout: () => {
+        dispatch(actions.actLogout());
+      },
+    };
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Menu);

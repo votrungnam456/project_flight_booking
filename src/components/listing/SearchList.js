@@ -12,6 +12,7 @@ class SearchList extends Component {
       ngayDi: null,
       ngayVe: null,
       hanhTrinh: null,
+      loaiVe: null
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -33,7 +34,7 @@ class SearchList extends Component {
   onSearch = (event) => {
     event.preventDefault();
     console.log(this.state);
-    if(this.state.sanBayDiID == null || this.state.sanBayDenID == null || this.state.ngayDi == null || this.state.ngayVe == null)
+    if(this.state.sanBayDiID == null || this.state.sanBayDenID == null || this.state.ngayDi == null || (this.state.ngayVe == null && this.state.hanhTrinh == "KH"))
     {
        return;
     }
@@ -59,6 +60,7 @@ class SearchList extends Component {
                           value={this.state.sanBayDiID}
                           onChange={this.handleChange}
                         >
+                          <option>Từ ... </option>
                           {this.showSanBayDi(flights)}
                         </select>
                         <img
@@ -77,6 +79,7 @@ class SearchList extends Component {
                           value={this.state.sanBayDenID}
                           onChange={this.handleChange}
                         >
+                          <option>Đến ... </option>
                           {this.showSanBayDen(flights, this.state.sanBayDiID)}
                         </select>
                         <img
@@ -95,16 +98,14 @@ class SearchList extends Component {
                           id="datepicker"
                           className="form-control open-select"
                           type="date"
-                          min={this.getDate()}
+                          min= "2021-05-15" //{this.getDate()}
                           max="2030-01-01"
                           value={this.state.ngayDi}
                           onChange={this.handleChange}
                         />
                       </div>
                     </div>
-                    <div className="col-lg-2">
                       {this.showNgayVe()}
-                    </div>
                     <div className="col-lg-2">
                       <div className="form-group">
                         <label>Loại hành trình</label>
@@ -114,8 +115,9 @@ class SearchList extends Component {
                           value={this.state.hanhTrinh}
                           onChange={this.handleChange}
                         >
-                          <option value="KH">Khứ hồi</option>
+                          <option>Loại hàng trình ...</option>
                           <option value="MC">Một chiều</option>
+                          <option value="KH">Khứ hồi</option>
                         </select>
                         <img
                           src="../assets/images/icon/user.png"
@@ -132,6 +134,27 @@ class SearchList extends Component {
                         </button>
                       </div>
                     </div>
+                    <div className="col-lg-2">
+                      <div className="form-group">
+                      <label>Loại vé</label>
+                        <select
+                          name="loaiVe"
+                          className="form-control open-select"
+                          value={this.state.loaiVe}
+                          onChange={this.handleChange}
+                        >
+                          <option>Loại vé ...</option>
+                          <option value="PT">Vé phổ thông</option>
+                          <option value="TG">Vé thương gia</option>
+                        </select>
+                        <img
+                          src="../assets/images/icon/user.png"
+                          className="img-fluid blur-up lazyload"
+                          alt
+                        />
+                      </div>
+                    </div>
+                   
                   </form>
                 </div>
               </div>
@@ -145,19 +168,21 @@ class SearchList extends Component {
   showNgayVe = () => {
     if(this.state.hanhTrinh == "KH")
     {
-      return <div className="form-group">
-              <label>Ngày trở về</label>
-              <input
-                name="ngayVe"
-                className="form-control open-select"
-                type="date"
-                min={this.state.ngayDi}
-                max="2022-01-01"
-                placeholder="Return Date"
-                id="datepicker1"
-                value={this.state.ngayVe}
-                onChange={this.handleChange}
-              />
+      return <div className="col-lg-2">
+              <div className="form-group">
+                      <label>Ngày trở về</label>
+                      <input
+                        name="ngayVe"
+                        className="form-control open-select"
+                        type="date"
+                        min={this.state.ngayDi}
+                        max="2022-01-01"
+                        placeholder="Return Date"
+                        id="datepicker1"
+                        value={this.state.ngayVe}
+                        onChange={this.handleChange}
+                      />
+                    </div>
             </div>
     }
   }

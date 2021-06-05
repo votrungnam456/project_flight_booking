@@ -5,8 +5,6 @@ class flightItem extends Component {
 
   render() {
     var { flight } = this.props;
-    var d2 = new Date();
-    d2.setTime(flight.ngayGio);
     return (
         <div className="detail-bar">
         <div className="detail-wrap wow fadeInUp">
@@ -20,16 +18,16 @@ class flightItem extends Component {
             <div className="col-md-5">
               <div className="airport-part">
                 <div className="airport-name">
-                  <h4>17.00</h4>
+                  <h4>{flight.gio}</h4>
                   <h6>{flight.codeSanDi}</h6>
                 </div>
                 <div className="airport-progress">
                   <div className="stop">
-                    {d2.toString()}
+                    {flight.ngay}
                   </div>
                 </div>
                 <div className="airport-name arrival">
-                  <h4>22.20</h4>
+                  <h4>{this.converTime(flight.gio, flight.thoiGianBay)}</h4>
                   <h6>{flight.codeSanDen}</h6>
                 </div>
               </div>
@@ -37,14 +35,14 @@ class flightItem extends Component {
             <div className="col-md-2">
               <div className="price">
                 <div>
-                  <h4>{flight.donGiaPT} VND</h4>
+                  <h4>{parseInt(flight.donGia)} VND</h4>
                   <span>không hoàn tiền</span>
                 </div>
               </div>
             </div>
             <div className="col-xl-2 col-md-3">
               <div className="book-flight">
-                <Link to={`/booking/${flight.id}`} className="btn btn-solid color1 ">
+                <Link to={`/booking/${flight.id}/${flight.idVe}`} className="btn btn-solid color1 ">
                     đặt vé ngay
                 </Link>
               </div>
@@ -54,6 +52,21 @@ class flightItem extends Component {
       </div>
     );
   }
+
+  converTime = (gio, thoiGianBay) => {
+    var h = parseInt(gio);
+    var time = parseInt(thoiGianBay);
+
+    var result = time + h;
+    if(result > 23) {
+      result -= 23;
+    }
+    if(result < 10) {
+      return "0" + result + ".00"
+    } else {
+      return result + ".00"
+    }
+  } 
 
   showImgHangBay = (hangBay) => {
     if(hangBay === "VietJetAirline") {

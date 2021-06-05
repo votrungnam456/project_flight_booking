@@ -7,7 +7,7 @@ export default class Booking extends Component {
           return (
                <div>
                     <Breadcump/>
-                    <BookSession match ={this.props.match}/>
+                    <BookSession match ={this.props.match} history={this.props.history}/>
                </div>
           )
      }

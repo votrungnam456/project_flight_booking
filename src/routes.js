@@ -3,11 +3,12 @@ import Booking from './components/booking/Booking'
 import Listing from './components/listing/Listing'
 import BookingSession from './components/booking/BookSession'
 import BookingSuccess from './components/booking/BookingSuccess'
-import BookingAddOns from './components/booking/BookingAddOns'
 import BookingFailed from './components/booking/BookingFailed'
 import BookingPayment from './components/booking/BookingPayment'
 import NotFound from './components/home/NotFound'
 import ListingNotFound from './components/listing/ListingNotFound'
+import Login from './components/login/login'
+import Register from './components/login/register'
 // import React, { Component } from 'react'
 
 
@@ -18,9 +19,9 @@ const routes = [
           main: () => <Home></Home>
      },
      {
-          path: '/booking/:id',
-          exact: false,
-          main: ({match,location}) => <Booking location={location} match={match}></Booking>
+          path: '/booking/:id/:idVe',
+          exact: true,
+          main: ({match,location, history}) => <Booking history={history} location={location} match={match}></Booking>
      },
      {
           path: '/listing',
@@ -33,29 +34,29 @@ const routes = [
           main: () => <ListingNotFound></ListingNotFound>
      },
      {
-          path: '/booking/bookingsession',
-          exact: true,
-          main: ({match}) => <BookingSession match={match}></BookingSession>
-     },
-     {
-          path: '/booking/bookingsession/bookingaddons',
-          exact: true,
-          main: ({match}) => <BookingAddOns match={match}></BookingAddOns>
-     },
-     {
-          path: '/booking/bookingsession/bookingaddons/bookingpayment',
+          path: '/bookingpayment',
           exact: true,
           main: ({match}) => <BookingPayment match={match}></BookingPayment>
      },
      {
-          path: '/booking/bookingsession/bookingaddons/bookingpayment/bookingsuccess',
+          path: '/bookingsuccess',
           exact: true,
           main: ({match}) => <BookingSuccess match={match}></BookingSuccess>
      },
      {
-          path: '/booking/bookingfailed',
+          path: '/bookingfailed',
           exact: true,
           main: () => <BookingFailed></BookingFailed>
+     },
+     {
+          path: '/login',
+          exact: true,
+          main: ({history, match}) => <Login history={history} match={match}></Login>
+     },
+     {
+          path: '/register',
+          exact: true,
+          main: ({history}) => <Register history={history}></Register>
      },
      {
           path: '',

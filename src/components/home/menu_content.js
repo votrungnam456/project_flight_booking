@@ -19,7 +19,8 @@ class menu_content extends Component {
                                 </div>
                                 <h2>Hãy bắt đầu cuộc hành trình của bạn</h2>
                                 <h3>chỉ với vài thao tác nhỏ</h3>
-                                <a href="flight-round-trip.html" className="btn btn-rounded btn-sm color1 float-right">Đặt ngay</a>
+                                <a href="http://localhost:3000/listing" className="btn btn-rounded btn-sm color1 float-right">Đặt ngay</a>
+                                
                             </div>
                         </div>      
                     </div>

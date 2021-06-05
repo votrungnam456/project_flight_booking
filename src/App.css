@@ -67,3 +67,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   text-align: center;
   color: #e6766e;
 }
+
+#notification{
+  color: red;
+}
+
+

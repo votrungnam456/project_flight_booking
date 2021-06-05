@@ -9,7 +9,7 @@ const myReducer = (State = initialState, action) => {
         State = action.chuyenBay;
         return State;
       default: 
-        return [...State];
+        return State;
     }
 }
 
