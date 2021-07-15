@@ -29,6 +29,7 @@ class BookingPayment extends Component {
 
   render() {
     let GIA_IDVE = JSON.parse(localStorage.getItem("GIA_IDVE"));
+    console.log(this.props.booking)
     return (
       <div>
         <section className="small-section">
@@ -145,7 +146,7 @@ class BookingPayment extends Component {
                                     onClick={this.onBooking}
                                     type="button"
                                     className="btn btn-solid color1"
-                                    to={`/bookingsuccess`}
+                                    to={this.props.booking.khachHangID == -1 ?'/bookingfailed' : `/bookingsuccess`}
                                   >
                                     thanh toán
                                   </Link>
@@ -337,6 +338,7 @@ class BookingPayment extends Component {
 var mapStateToProps = (state) => {
   return {
     user: state.user,
+    booking:state.booking
   };
 };
 

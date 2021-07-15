@@ -2,14 +2,20 @@ import React, { Component } from "react";
 import FlightItem from './flight/flightItem'
 import { connect } from "react-redux";
 import * as actions from "../../actions/index";
-
+import axios from 'axios';
+import {API_URL} from '../../constants/ActionAPI'
 class SessionList extends Component {
   constructor(props) {
     super(props);
+
   }
+
+
+
 
   render() {
     var flights = this.props.data;
+
     return (
       <section className="pt-0 bg-inner small-section loader-section">
         <div className="container">

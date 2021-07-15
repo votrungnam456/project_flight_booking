@@ -9,6 +9,21 @@ export const actFetchSanBaysCallApi = () => {
     }
 }
 
+export const actFetchChuyenBays = (chuyenBay) => {
+    return {
+        type: types.FETCH_CHUYENBAY,
+        chuyenBay
+    }
+}
+
+export const actFetchChuyenBaysCallApi = () => {
+    return dispatch =>  {
+        return callApi('chuyenbay','GET',null).then(res => {
+            dispatch(actFetchChuyenBays(res.data));
+        })
+    }
+}
+
 export const actFetchSanBays = (sanBay) => {
     return {
         type: types.FETCH_SANBAY,
